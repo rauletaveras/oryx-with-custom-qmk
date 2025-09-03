@@ -5,7 +5,7 @@
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #define HOLD_ON_OTHER_KEY_PRESS
-#define SERIAL_NUMBER "3Vo6Y/lbjWqb"
+#define SERIAL_NUMBER "3Vo6Y/XbN5wo"
 #define LAYER_STATE_8BIT
 #define COMBO_COUNT 3
 
