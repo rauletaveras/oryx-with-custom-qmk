@@ -13,9 +13,9 @@ enum custom_keycodes {
 };
 
 
-#define DUAL_FUNC_0 LT(5, KC_F11)
-#define DUAL_FUNC_1 LT(5, KC_U)
-#define DUAL_FUNC_2 LT(8, KC_H)
+#define DUAL_FUNC_0 LT(12, KC_F11)
+#define DUAL_FUNC_1 LT(9, KC_F14)
+#define DUAL_FUNC_2 LT(11, KC_H)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox_pretty(
@@ -32,8 +32,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_F2,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_6,                                           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_BSPC,
     KC_F1,          KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_F4,                                          KC_EQUAL,       KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLS,
     KC_ESCAPE,      KC_A,           KC_S,           KC_D,           KC_F,           KC_G,                                                                           KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        KC_QUOTE,
-    OSM(MOD_LSFT),  KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,           KC_F3,                                          KC_MINUS,       KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_UP,          KC_SLASH,
-    KC_TRANSPARENT, KC_BSPC,        OSL(5),         KC_TAB,         OSM(MOD_LCTL),                                                                                                  KC_TRANSPARENT, KC_SLASH,       KC_LEFT,        KC_DOWN,        KC_RIGHT,
+    KC_LEFT_SHIFT,  KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,           KC_F3,                                          KC_MINUS,       KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_UP,          KC_SLASH,
+    KC_TRANSPARENT, KC_BSPC,        OSL(5),         KC_TAB,         KC_LEFT_CTRL,                                                                                                   KC_TRANSPARENT, KC_SLASH,       KC_LEFT,        KC_DOWN,        KC_RIGHT,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_HOME,        KC_END,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_SPACE,       MO(2),          OSM(MOD_LALT),  KC_CAPS,        KC_TRANSPARENT, KC_TRANSPARENT
@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [3] = LAYOUT_ergodox_pretty(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_PSCR,        KC_TRANSPARENT, LGUI(KC_TAB),   LCTL(KC_TAB),   LALT(KC_TAB),   KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_HOME,        KC_UP,          KC_END,         KC_TRANSPARENT, LSFT(KC_ENTER),
-    CW_TOGG,        OSM(MOD_LGUI),  OSM(MOD_LALT),  OSM(MOD_LSFT),  OSM(MOD_LCTL),  OSM(MOD_RALT),                                                                  KC_TRANSPARENT, KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_TRANSPARENT, KC_ENTER,
+    CW_TOGG,        OSM(MOD_RALT),  OSM(MOD_LALT),  OSM(MOD_LSFT),  OSM(MOD_LCTL),  OSM(MOD_LGUI),                                                                  KC_TRANSPARENT, KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_TRANSPARENT, KC_ENTER,
     KC_TRANSPARENT, LCTL(KC_Z),     LCTL(KC_X),     LCTL(KC_C),     LCTL(KC_V),     KC_BSPC,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_PAGE_UP,     KC_PGDN,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
@@ -59,10 +59,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [4] = LAYOUT_ergodox_pretty(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_LPRN,        KC_RPRN,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_DQUO,        KC_LABK,        KC_RABK,        KC_GRAVE,       KC_TILD,        KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_1,     KC_AMPR,        KC_LBRC,        KC_RBRC,        KC_PERC,        LSFT(KC_ENTER),
-    KC_TRANSPARENT, KC_EXLM,        KC_PLUS,        KC_MINUS,       KC_EQUAL,       KC_HASH,                                                                        OSM(MOD_RALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  OSM(MOD_LALT),  OSM(MOD_LGUI),  KC_ENTER,
-    KC_TRANSPARENT, KC_CIRC,        KC_SLASH,       KC_ASTR,        KC_BSLS,        KC_PIPE,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_DLR,         KC_COLN,        KC_LCBR,        KC_RCBR,        KC_AT,          KC_SCLN,
+    KC_TRANSPARENT, KC_EXLM,        KC_PLUS,        KC_MINUS,       KC_EQUAL,       KC_HASH,                                                                        OSM(MOD_LGUI),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  OSM(MOD_LALT),  OSM(MOD_RALT),  KC_ENTER,
+    KC_TRANSPARENT, KC_CIRC,        KC_ASTR,        KC_UNDS,        KC_BSLS,        KC_PIPE,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_DLR,         KC_COLN,        KC_LCBR,        KC_RCBR,        KC_SCLN,        KC_AT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
@@ -100,10 +100,12 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT_ergodo
 
 const uint16_t PROGMEM combo0[] = { KC_4, KC_5, KC_6, KC_7, COMBO_END};
 const uint16_t PROGMEM combo1[] = { KC_D, KC_M, COMBO_END};
+const uint16_t PROGMEM combo2[] = { KC_M, KC_Z, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, LGUI(KC_L)),
     COMBO(combo1, ST_MACRO_2),
+    COMBO(combo2, KC_Q),
 };
 
 
@@ -129,7 +131,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
     [3] = { {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {74,255,255}, {129,255,166}, {129,255,166}, {129,255,166}, {74,255,255}, {74,255,255}, {74,255,255}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166}, {129,255,166} },
 
-    [4] = { {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {35,255,255}, {35,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {35,255,255}, {35,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {35,255,255}, {35,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {35,255,255}, {35,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {35,255,255}, {35,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255} },
+    [4] = { {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {35,255,255}, {35,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {35,255,255}, {35,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {35,255,255}, {35,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {35,255,255}, {35,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {35,255,255}, {35,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {35,255,255}, {35,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255}, {198,255,255} },
 
     [5] = { {129,255,139}, {225,209,255}, {225,209,255}, {225,209,255}, {129,255,139}, {23,255,255}, {225,209,255}, {225,209,255}, {225,209,255}, {129,255,139}, {23,255,255}, {129,255,139}, {129,255,139}, {129,255,139}, {129,255,139}, {23,255,255}, {225,209,255}, {225,209,255}, {225,209,255}, {23,255,255}, {225,209,255}, {225,209,255}, {23,255,255}, {23,255,255}, {129,255,139}, {225,209,255}, {225,209,255}, {225,209,255}, {225,209,255}, {129,255,139}, {225,209,255}, {225,209,255}, {225,209,255}, {225,209,255}, {129,255,139}, {129,255,139}, {129,255,139}, {129,255,139}, {129,255,139}, {129,255,139}, {225,209,255}, {225,209,255}, {225,209,255}, {225,209,255}, {129,255,139}, {129,255,139}, {129,255,139}, {129,255,139} },
 
