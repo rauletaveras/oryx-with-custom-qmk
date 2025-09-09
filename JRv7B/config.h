@@ -7,7 +7,7 @@
 #define COMBO_TERM 80
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define SERIAL_NUMBER "JRv7B/GGLgzV"
+#define SERIAL_NUMBER "JRv7B/dPn6R5"
 #define LAYER_STATE_8BIT
 #define COMBO_COUNT 3
 
