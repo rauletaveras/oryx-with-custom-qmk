@@ -13,14 +13,14 @@ enum custom_keycodes {
 };
 
 
-#define DUAL_FUNC_0 LT(15, KC_Q)
-#define DUAL_FUNC_1 LT(3, KC_U)
+#define DUAL_FUNC_0 LT(5, KC_Z)
+#define DUAL_FUNC_1 LT(9, KC_X)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox_pretty(
     KC_LEFT_GUI,    KC_RIGHT_ALT,   KC_TAB,         KC_ESCAPE,      MO(6),          KC_BSPC,        LGUI(KC_H),                                     KC_TRANSPARENT, KC_DELETE,      MO(6),          KC_BSPC,        KC_ENTER,       KC_RIGHT_ALT,   KC_LEFT_GUI,
     KC_LEFT_ALT,    KC_X,           KC_F,           KC_L,           KC_B,           KC_K,           DUAL_FUNC_0,                                    LCTL(KC_T),     KC_P,           KC_G,           KC_O,           KC_U,           KC_QUOTE,       KC_LEFT_ALT,
-    MT(MOD_LSFT, KC_ESCAPE),KC_N,           KC_S,           KC_H,           KC_T,           KC_J,                                                                           KC_Y,           KC_C,           KC_A,           KC_E,           KC_I,           KC_LEFT_SHIFT,
+    KC_LEFT_SHIFT,  KC_N,           KC_S,           KC_H,           KC_T,           KC_J,                                                                           KC_Y,           KC_C,           KC_A,           KC_E,           KC_I,           KC_LEFT_SHIFT,
     KC_LEFT_CTRL,   KC_V,           KC_Z,           KC_M,           KC_D,           KC_TRANSPARENT, DUAL_FUNC_1,                                    LCTL(KC_W),     KC_TRANSPARENT, KC_W,           KC_SLASH,       KC_COMMA,       KC_DOT,         KC_LEFT_CTRL,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TAB,         KC_Z,                                                                                                           KC_Z,           KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,
                                                                                                     TT(1),          KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_0,
