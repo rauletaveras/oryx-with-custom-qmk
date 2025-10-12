@@ -13,8 +13,8 @@ enum custom_keycodes {
 };
 
 
-#define DUAL_FUNC_0 LT(5, KC_Z)
-#define DUAL_FUNC_1 LT(9, KC_X)
+#define DUAL_FUNC_0 LT(7, KC_F4)
+#define DUAL_FUNC_1 LT(5, KC_F1)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox_pretty(
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, MO(5),          KC_TRANSPARENT
   ),
   [4] = LAYOUT_ergodox_pretty(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, RALT(LSFT(KC_7)),RALT(KC_6),     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, RALT(KC_7),     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, RALT(KC_6),     RALT(LSFT(KC_7)),KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, RALT(KC_7),     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_DQUO,        KC_LABK,        KC_RABK,        KC_GRAVE,       KC_TILD,        KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_1,     KC_AMPR,        KC_LBRC,        KC_RBRC,        KC_PERC,        KC_TRANSPARENT,
     KC_TRANSPARENT, KC_EXLM,        KC_PLUS,        KC_MINUS,       KC_EQUAL,       KC_HASH,                                                                        KC_AT,          KC_BSPC,        KC_LPRN,        KC_RPRN,        KC_ENTER,       KC_TRANSPARENT,
     KC_TRANSPARENT, KC_CIRC,        KC_ASTR,        KC_UNDS,        KC_BSLS,        KC_PIPE,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_DLR,         KC_COLN,        KC_LCBR,        KC_RCBR,        KC_SCLN,        KC_TRANSPARENT,
@@ -210,7 +210,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_1:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_MINUS)SS_DELAY(70)  SS_TAP(X_MINUS)SS_DELAY(70)  SS_TAP(X_MINUS));
+      SEND_STRING(SS_TAP(X_SCLN)SS_DELAY(100)  SS_TAP(X_MINUS));
     }
     break;
     case ST_MACRO_2:
