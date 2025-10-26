@@ -13,8 +13,8 @@ enum custom_keycodes {
 };
 
 
-#define DUAL_FUNC_0 LT(13, KC_0)
-#define DUAL_FUNC_1 LT(2, KC_F9)
+#define DUAL_FUNC_0 LT(2, KC_8)
+#define DUAL_FUNC_1 LT(15, KC_Y)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox_pretty(
@@ -109,10 +109,14 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT_ergodo
 
 const uint16_t PROGMEM combo0[] = { KC_D, KC_M, COMBO_END};
 const uint16_t PROGMEM combo1[] = { KC_M, KC_Z, COMBO_END};
+const uint16_t PROGMEM combo2[] = { KC_H, KC_M, COMBO_END};
+const uint16_t PROGMEM combo3[] = { KC_A, KC_SLASH, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, ST_MACRO_2),
     COMBO(combo1, KC_Q),
+    COMBO(combo2, KC_ESCAPE),
+    COMBO(combo3, KC_ENTER),
 };
 
 
